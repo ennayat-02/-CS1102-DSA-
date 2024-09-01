@@ -6,7 +6,7 @@ void main(){
     int choice;
    do{ printf("\n ------Queue------");
     printf("\n Enter your choice:");
-    printf("\n 1.Insert \n 2.Delete \n 3.Display");
+    printf("\n 1.Insert \n 2.Delete \n 3.Display \n 4.Peep");
     printf("\n ------------------");
     printf("Enter your choice:");
     scanf("%d",&choice);
@@ -15,10 +15,11 @@ void main(){
     {case 1: insert();break;
      case 2: delete1();break;
      case 3: display();break;
+     case 4: peep();break;
      default: printf("\n Invalid choice");
     }
     }
-    while(choice!=4);
+    while(choice!=5);
 }
 
 void insert(){
@@ -55,5 +56,15 @@ void display(){
             printf("\n %d",Que[i]);
         }
     }
+}
+
+void peep() {
+    if (front == -1) {
+        printf("Queue is empty\n");
+        return -1;
+    }
+    else
+        printf( "\n %d",Que[front]);
+
 }
 
